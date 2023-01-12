@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-assignment-poperty-events-binding-view-encapsulation';
+  oddNumbers: number[] = []
+  evenNumbers: number[] = []
+
+  onGameValueChanged(number: number){
+    if(number % 2 === 0){
+      this.evenNumbers.push(number);
+    }else{
+      this.oddNumbers.push(number);
+    }
+  }
 }
